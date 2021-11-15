@@ -1,5 +1,12 @@
 
-public class InputFrame extends MainFrame{
-	public InputFrame() {}
+public class InputFrame extends BasicFrame{
+	
+	public InputFrame() {
+		InitSetting();
+	}
+	
+	public void GUISetting() {
+		
+	}
 	
 }

@@ -42,7 +42,7 @@ public class BasicFrame extends JFrame{
 		NorthPanel.setBackground(Color.WHITE); WestPanel.setBackground(Color.WHITE);
 		EastPanel.setBackground(Color.WHITE);
 		
-		BorderPanel.setLayout(new BorderLayout(500,200)); // BorderPanel의 배치 관리자 BorderLayout으로 설정
+		BorderPanel.setLayout(new BorderLayout(550,200)); // BorderPanel의 배치 관리자 BorderLayout으로 설정
 		BorderPanel.add(CenterPanel, BorderLayout.CENTER); // 각 위치에 맞게 패널 위치 지정
 		BorderPanel.add(NorthPanel, BorderLayout.NORTH);
 		BorderPanel.add(SouthPanel, BorderLayout.SOUTH);

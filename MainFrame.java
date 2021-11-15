@@ -11,6 +11,8 @@ public class MainFrame extends BasicFrame { // GUI틀 Frame
 	private JLabel tip = new JLabel("오늘의 팁: "); // 오늘의 팁 레이블
 	private JLabel antProgram = new JLabel("개미의 알뜰살뜰!"); // 프로그램 이름 레이블
 	
+	private NextPage nextpage = new NextPage();
+	
 	public MainFrame() {
 		MainButton[Button.expenseIncomeInputButton.ordinal()] = new JButton("입                     력"); // 0
 		MainButton[Button.categoryManageButton.ordinal()] = new JButton("조                     회"); // 1
@@ -38,7 +40,19 @@ public class MainFrame extends BasicFrame { // GUI틀 Frame
 			MainButton[i].setBackground(Color.BLACK);
 			MainButton[i].setForeground(Color.WHITE);
 			MainButton[i].setFont(new Font("함초롱바탕", Font.BOLD, 15));
+			MainButton[i].addActionListener(nextpage);
 			CenterPanel.add(MainButton[i]); // 여기에 버튼들 GridLayout으로 추가
+		}
+	}
+	
+	class NextPage implements ActionListener{
+		public void actionPerformed(ActionEvent e) {
+			JButton b = (JButton)e.getSource();
+			String compareText = b.getText().replace(" ", "");
+			if(compareText.equals("입력")) {
+				new InputFrame();
+				setVisible(false);
+			}
 		}
 	}
 }

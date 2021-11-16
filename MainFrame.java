@@ -26,23 +26,23 @@ public class MainFrame extends BasicFrame { // GUI틀 Frame
 	
 	/* BasicFrame의 기본적인 틀 이용할거임
 	 * 기본적인 테두리, 넣어줘야 할 패널은 BasicPanel에서 준비되어 있음.
-	 * 버튼들은 CenterPanel에 넣어줘야 하므로 CenterPanel의 배치관리자 GridLayout으로 설정하고 여기에 버튼을 넣어줌
-	 * 
+	 * 버튼들은 BorderPanel에 넣어줘야 하므로 BorderPanel의 배치관리자 BorderPanel으로 설정하고 여기에 버튼을 넣어줌
 	 * */
 	private void GUISetting() {
+		BorderPanel.setLayout(new GridLayout(7,1,1,25)); // 이게 작성되는 부분의 GridLayout(5행 1열 vGap = 25)
+		
 		tip.setFont(new Font("함초롱바탕", Font.BOLD, 25)); // 팁 설정
-		SouthPanel.add(tip);
 		antProgram.setFont(new Font("함초롱바탕", Font.BOLD, 30)); // 프로그램 이름 설정
-		NorthPanel.add(antProgram); 
-		CenterPanel.setLayout(new GridLayout(5,1,1,25)); // 이게 작성되는 부분의 GridLayout(5행 1열 vGap = 25)
+		BorderPanel.add(antProgram); 
 		
 		for(int i=0; i<5; i++) { // CenterPanel에 설정한 버튼들 추가
 			MainButton[i].setBackground(Color.BLACK);
 			MainButton[i].setForeground(Color.WHITE);
 			MainButton[i].setFont(new Font("함초롱바탕", Font.BOLD, 15));
 			MainButton[i].addActionListener(nextpage);
-			CenterPanel.add(MainButton[i]); // 여기에 버튼들 GridLayout으로 추가
+			BorderPanel.add(MainButton[i]); // 여기에 버튼들 GridLayout으로 추가
 		}
+		BorderPanel.add(tip);
 	}
 	
 	class NextPage implements ActionListener{

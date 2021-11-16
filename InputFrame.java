@@ -30,18 +30,18 @@ public class InputFrame extends BasicFrame{
 	
 	public InputFrame() { // 생성자
 		InitObject();
-		CenterPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 30)); // 왼쪽정렬, 수직거리 30
-		CenterPanel.add(Calendar); // 순서대로 저장
-		CenterPanel.add(Year);
-		CenterPanel.add(YearLabel);
-		CenterPanel.add(Month);
-		CenterPanel.add(MonthLabel);
-		CenterPanel.add(Date);
-		CenterPanel.add(DateLabel);
-		CenterPanel.add(CategoryLabel);
-		CenterPanel.add(Category);
-		CenterPanel.add(KRW);
-		CenterPanel.add(USD);
+		BorderPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 30)); // 왼쪽정렬, 수직거리 30
+		BorderPanel.add(Calendar); // 순서대로 저장
+		BorderPanel.add(Year);
+		BorderPanel.add(YearLabel);
+		BorderPanel.add(Month);
+		BorderPanel.add(MonthLabel);
+		BorderPanel.add(Date);
+		BorderPanel.add(DateLabel);
+		BorderPanel.add(CategoryLabel);
+		BorderPanel.add(Category);
+		BorderPanel.add(KRW);
+		BorderPanel.add(USD);
 		
 		SettingComboBox();
 		

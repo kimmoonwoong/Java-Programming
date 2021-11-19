@@ -2,10 +2,16 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 /*
- * 사용 방법. BasicFrame 상속, 생성자 맨 위에 InitSetting()함수 호출
- *  - 가운데 부분에 버튼같은거 넣는 방법
- *  1. BorderPanel 배치관리자 설정해줘야함 null이나 gridLayout이나 ex) BorderPanel.setLayout(null);
- *  2. BorderPanel에 add해줘야함 ex) BorderPanel.add(new JButton("메롱"));
+ * 사용 방법. BasicFrame 상속, 생성자 맨 위에 InitSetting()함수 이제는 호출하면 안됩니다!! 자동으로 호출해줘요!
+ *  - 가운데 부분에 버튼같은거 넣는 방법 (수정됐음 BorderPanel >> CenterPanel)
+ *  1. BorderPanel 배치관리자 설정해줘야함 null이나 gridLayout이나 ex) CenterPanel.setLayout(null);
+ *  2. BorderPanel에 add해줘야함 ex) CenterPanel.add(new JButton("메롱"));
+ *  - 이제 Acitve 클래스는 ButtonClick클래스에서 변경해주세요!
+ *  - 버튼 클릭시 작동하게 하려면 MainButton.addActionListener(buttonclick); 이렇게 해줘야 해요!
+ *  buttonclick은 이 BasicPanel클래스 안에 있기 때문에 buttonclick = new ButtonClick(frame)을 해줘야 합니다.
+ *  여기에서 frame은 생성자로 받아줘야해요!
+ *  버튼이나 라벨 고정되는 크기나 폰트 클래스로 만들어서 선언과 동시에 적용해주려 했는데 이부분 따로 얘기해야할것 같습니다.(서로 같은 디자인 해야하기 때문)
+ *  뒤로가기 버튼, 확인 버튼도 얘기해야할것 같습니다.
  *  끝!
  */
 public class BasicPanel extends JPanel{

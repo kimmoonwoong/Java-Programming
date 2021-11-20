@@ -11,3 +11,4 @@ public class BasicButton extends JButton{
 		setFont(new Font("���ʷչ���", Font.BOLD, 18));
 	}
 }
+a
